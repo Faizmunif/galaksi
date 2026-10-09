@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b22">
+  <meta name="description" content="Sebuah semesta kecil yang dibuat khusus untuk Seng.">
+  <title>Untuk Seng ✦ Sebuah Semesta Kecil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Kembali ke awal">✦ <span>22 Tahun Seng</span></a>
+    <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false">♫ Musik: mati</button>
+  </header>
+
+  <main>
+    <section class="page hero section active" id="home">
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      <div class="planet" aria-hidden="true"><span></span></div>
+      <p class="eyebrow">SEBUAH SEMESTA KECIL, KHUSUS UNTUKMU</p>
+      <h1>Selamat ulang tahun,<br><em>Sengku.</em></h1>
+      <p class="hero-copy">Di antara miliaran bintang, aku tetap bersyukur semesta mempertemukanku dengan kamu.</p>
+      <button class="primary-btn" id="startBtn" type="button">Mulai perjalanan kita <span>✦</span></button>
+    </section>
+
+    <section class="page section intro" id="journey">
+      <p class="eyebrow">01 / PERJALANAN KECIL KITA</p>
+      <h2>Beberapa hal indah<br>layak untuk <em>diingat.</em></h2>
+      <p class="section-copy">Ini bukan seluruh cerita kita. Hanya beberapa potongan kecil yang ingin kusimpan di langit kita.</p>
+      <div class="memory-grid">
+        <!-- KARTU 1: AWAL CERITA -->
+        <article class="memory-card">
+          <img class="memory-photo" src="D:\Ultah 12 Oktober\galaksi-untuk-seng-starter\assets\photos\foto-01.jpeg" alt="Kenangan awal kita di LKMM-TM" loading="lazy" />
+          <p class="card-kicker">AWAL CERITA</p>
+          <h3>Berawal dari LKMM-TM</h3>
+          <p>
+            Oi pendekkk, masih inget ga awal kita di sini?
+            Di LKMM-TM ituuu. Siapa sangka, dari tempat itu
+            ternyata aku menemukan jawaban dari perasaan
+            yang selama ini kupendam setelah sekian lama
+            mengagumi ayang.
+        
+            Aku percaya, pertemuan kita pasti punya alasannya
+            sendiri. Dan ternyata, salah satu alasan terindahnya
+            adalah kita bisa sampai di titik ini.
+        
+            Cihuyyy, hampir setahun kitaa!
+          </p>
+        </article>
+        
+        <!-- KARTU 2: KENANGAN FAVORIT -->
+        <article class="memory-card">
+          <img class="memory-photo" src="D:\Ultah 12 Oktober\galaksi-untuk-seng-starter\assets\photos\foto-02.jpeg" alt="Kenangan manis kita berdua" loading="lazy" />
+          <p class="card-kicker">KENANGAN FAVORIT</p>
+          <h3>Katanya Nggak Mau Gandengan Dulu 🤭</h3>
+          <p>
+            Nihhh, masih inget kan? Yang cowok udah nahan
+            diri biar nggak gandengan tangan dulu, ehhh
+            yang cewek malah ngebet ngode pengen digandeng.
+        
+            AWOKAWOKAWOK, dasar ceweee.
+        
+            Kalau diinget-inget sekarang lucu banget yaa.
+            Ternyata, hal sesederhana itu bisa jadi kenangan
+            yang bakal selalu aku senyumin.
+          </p>
+        </article>
+        
+        <!-- KARTU 3: TENTANG SENG -->
+        <article class="memory-card">
+          <img class="memory-photo" src="D:\Ultah 12 Oktober\galaksi-untuk-seng-starter\assets\photos\foto-03.jpeg" alt="Seng, orang spesial di hidupku" loading="lazy" />
+          <p class="card-kicker">TENTANG SENG</p>
+          <h3>Eitsss, Ada yang Aku Mau Tiap Hari</h3>
+          <p>
+            Eitssss, nih ini nih salah satu hal yang paling
+            aku sukai dari ayang. AWOKAWOKAWOK.
+        
+            Semoga nanti tiap hari aku bisa dapet, yaaa.
+            Aamiin paling serius! 🤭❤️
+        
+            Pokoknya, semoga hal-hal kecil yang bikin aku
+            seneng ini bisa terus jadi bagian dari cerita kita.
+          </p>
+        </article>
+
+      </div>
+      <div class="page-navigation">
+        <button class="back-btn" onclick="showPage('home')">
+          ← Kembali
+        </button>
+        <button class="primary-btn" onclick="showPage('game')">
+          Temukan bintang berikutnya ✦
+        </button>
+      </div>
+
+    </section>
+
+    <section class="page section game-section" id="game">
+      <p class="eyebrow">02 / MISI BINTANG</p>
+      <h2>Bisa temukan jalan<br>menuju <em>surat rahasia?</em></h2>
+      <p class="section-copy">Jawab tiga pertanyaan kecil ini. Bukan ujian, kok—ini cuma cara kita mengingat hal-hal manis.</p>
+      <div class="game-panel">
+        <div class="game-progress"><span id="progressText">BINTANG 1 DARI 3</span><div class="progress-track"><span id="progressBar"></span></div></div>
+        <div id="quizArea">
+          <h3 id="question">Kenangan apa yang paling ingin kita simpan?</h3>
+          <div class="answers" id="answers"></div>
+          <p class="game-feedback" id="feedback" aria-live="polite"></p>
+        </div>
+        <div id="gameComplete" class="game-complete" hidden>
+          <div class="big-star">✦</div><h3>Kamu menemukan ketiga bintang!</h3>
+          <p>Gerbang kecil menuju surat rahasia sudah terbuka.</p>
+          <button class="primary-btn" id="letterBtn" type="button">Buka surat untuk Seng</button>
+        </div>
+        <div class="page-navigation">
+          <button class="back-btn" onclick="showPage('journey')">
+            ← Kenangan
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="page section letter-section" id="letter">
+      <p class="eyebrow">03 / PESAN DARI HATIKU</p>
+      <div class="letter-card">
+        <div class="letter-seal">♡</div>
+        <p class="card-kicker">UNTUK SENG, DI HARI ISTIMEWAMU</p>
+        <h2>Kalau aku bisa meminta satu hal dari semesta…</h2>
+        <div class="letter-body">
+          <p>aku ingin kamu selalu punya alasan untuk tersenyum, tempat untuk pulang saat lelah, dan orang-orang yang mengingatkanmu betapa berharganya dirimu.</p>
+          <p>Terima kasih sudah hadir dalam hidupku. Terima kasih untuk tawa, cerita, perhatian kecil, dan semua momen yang mungkin terlihat biasa, tapi menjadi istimewa karena ada kamu di dalamnya.</p>
+          <p>Di hari ulang tahunmu ini, aku tidak berharap kamu harus selalu kuat atau selalu bahagia. Aku hanya berharap kamu bisa tumbuh menjadi dirimu sendiri, pelan-pelan, dengan hati yang tenang. Semoga hal-hal baik menemukanmu, bahkan pada hari-hari ketika kamu tidak sedang mencarinya.</p>
+          <p>Kalau suatu hari dunia terasa terlalu ramai, semoga kamu ingat bahwa di semesta yang luas ini, ada aku yang selalu ingin mendengarkan ceritamu dan merayakan dirimu.</p>
+          <p class="letter-signoff">Selamat bertambah usia, Seng.<br><em>Kamu adalah salah satu hal paling indah yang pernah semesta pertemukan denganku.</em></p>
+        </div>
+        <p class="signature">Tertanda sayang,<br><span>orang yang memilihmu setiap hari ♡</span></p>
+      </div>
+      <div class="page-navigation letter-navigation">
+        <button class="primary-btn" id="finalSurpriseBtn" type="button">
+          Ada satu hal lagi untukmu ✦
+        </button>
+      </div>
+
+    </section>
+
+    <section class="page section wish-section" id="wish">
+      <div class="finale-content">
+
+        <p class="eyebrow">05 / OUR LITTLE UNIVERSE</p>
+
+        <h2>
+          To my favorite star,<br>
+          <em>my Seng.</em>
+        </h2>
+
+        <p class="section-copy">
+          Dari sekian banyak bintang di langit,
+          aku bersyukur semesta mempertemukanku dengan kamu.
+        </p>
+
+        <!-- KONSTELASI HATI -->
+        <div class="heart-universe" aria-label="Konstelasi bintang berbentuk hati">
+          <div class="heart-glow"></div>
+
+          <svg class="heart-constellation" viewBox="0 0 300 260" role="img" aria-label="Bintang-bintang membentuk hati">
+
+            <defs>
+              <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f4d49a" />
+                <stop offset="100%" stop-color="#e9b8d3" />
+              </linearGradient>
+            </defs>
+
+            <g class="heart-lines" fill="none" stroke="url(#heartGradient)" stroke-width="1.2">
+
+              <path d="M150 220 L80 155 L45 105 L65 65
+                      L110 55 L150 90 L190 55 L235 65
+                      L255 105 L220 155 Z" />
+
+              <path d="M80 155 L150 145 L220 155
+                      M110 55 L150 145 L190 55
+                      M45 105 L150 145 L255 105
+                      M65 65 L150 220 L235 65" />
+            </g>
+
+            <g class="heart-stars" fill="#fff4d6">
+              <circle cx="150" cy="220" r="3.5" />
+              <circle cx="80" cy="155" r="3" />
+              <circle cx="45" cy="105" r="2.5" />
+              <circle cx="65" cy="65" r="3" />
+              <circle cx="110" cy="55" r="3.5" />
+              <circle cx="150" cy="90" r="3" />
+              <circle cx="190" cy="55" r="3.5" />
+              <circle cx="235" cy="65" r="3" />
+              <circle cx="255" cy="105" r="2.5" />
+              <circle cx="220" cy="155" r="3" />
+              <circle cx="150" cy="145" r="4" />
+            </g>
+          </svg>
+
+          <span class="floating-star star-a">✦</span>
+          <span class="floating-star star-b">✧</span>
+          <span class="floating-star star-c">✦</span>
+          <span class="floating-star star-d">✧</span>
+        </div>
+
+        <p class="constellation-caption">
+          A little universe, made just for you. ♡
+        </p>
+
+        <div class="birthday-message">
+          <p class="eyebrow">12 OKTOBER 2026</p>
+
+          <h3>Selamat ulang tahun, Seng!</h3>
+
+          <p>
+            Semoga di usia barumu, ada banyak hal baik yang
+            datang, banyak alasan untuk tersenyum, dan banyak
+            mimpi yang perlahan menjadi nyata.
+          </p>
+
+          <p>
+            Terima kasih sudah menjadi bagian dari ceritaku.
+            Semoga setelah hampir setahun ini, kita masih
+            punya banyak halaman indah untuk ditulis bersama.
+          </p>
+
+          <p class="final-love">
+            Kalau semesta memberi kesempatan lagi,<br>
+            aku tetap ingin bertemu kamu. ❤️
+          </p>
+        </div>
+
+        <button class="wish-button" id="wishBtn" type="button">
+          ✦
+        </button>
+
+        <p id="wishMessage" class="wish-message" aria-live="polite">
+          Tekan bintangnya, Seng. Titipkan satu harapanmu.
+        </p>
+
+        <button class="primary-btn restart-button" id="restartBtn" type="button">
+          ↺ Putar perjalanan kita lagi
+        </button>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>dibuat dengan sepenuh hati, untuk Seng <span>✦</span></footer>
+  <audio id="bgMusic" loop preload="none">
+    <!-- Tambahkan file musik milikmu sendiri, lalu ubah src menjadi assets/music.mp3 -->
+    <source src="D:\Ultah 12 Oktober\galaksi-untuk-seng-starter\assets\music.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
