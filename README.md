@@ -15,7 +15,7 @@ Website ulang tahun mobile-friendly, dibuat dengan HTML, CSS, dan JavaScript mur
 3. Klik dua kali `index.html` untuk melihat website di browser.
 4. Untuk pengalaman lebih baik, buka lewat VS Code dan gunakan ekstensi Live Server.
 
-## 2. Personalisasi sebelum tanggal 12 Oktober 2026
+## 2. Personalisasi sebelum tanggal 
 ### Foto
 Cara paling mudah: buka `index.html`, cari `photo-slot`, lalu ganti blok visual tiap kartu dengan:
 `<img class="memory-photo" src="assets/photos/foto-01.jpg" alt="Kenangan kita">`
